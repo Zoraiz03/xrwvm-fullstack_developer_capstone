@@ -4,6 +4,8 @@ from django.http import JsonResponse
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
 from django.views.decorators.csrf import csrf_exempt
+from .models import CarMake, CarModel
+from .populate import initiate
 
 # Logger
 logger = logging.getLogger(__name__)
@@ -77,3 +79,19 @@ def logout_user(request):
             logger.error(f"Logout error: {str(e)}")
             return JsonResponse({"error": "Logout failed"}, status=400)
     return JsonResponse({"error": "GET or POST request required"}, status=405)
+
+
+# ---------------------------
+# Get Cars API
+# ---------------------------
+@csrf_exempt
+def get_cars(request):
+    count = CarMake.objects.filter().count()
+    print(count)
+    if(count == 0):
+        initiate()
+    car_models = CarModel.objects.select_related('car_make')
+    cars = []
+    for car_model in car_models:
+        cars.append({"CarModel": car_model.name, "CarMake": car_model.car_make.name})
+    return JsonResponse({"CarModels":cars})
