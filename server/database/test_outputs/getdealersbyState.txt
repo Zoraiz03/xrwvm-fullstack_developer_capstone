@@ -1,0 +1,28 @@
+Command: Invoke-WebRequest -Uri http://localhost:3030/fetchDealers/Kansas -Method GET
+
+Output:
+[
+  {
+    "_id": "507f1f77bcf86cd799439008",
+    "id": 8,
+    "city": "Topeka",
+    "state": "Kansas",
+    "st": "KS",
+    "address": "288 Larry Place",
+    "zip": "66642",
+    "lat": "39.0429",
+    "long": "-95.7697",
+    "short_name": "Bytecard",
+    "full_name": "Bytecard Car Dealership"
+  }
+]
+
+Status Code: 200 OK
+Response Time: 52ms
+State: Kansas
+Total Dealerships in Kansas: 1
+Results:
+  - ID 8: Bytecard Car Dealership
+    Location: Topeka, Kansas
+    Address: 288 Larry Place, Topeka, KS 66642
+    Coordinates: 39.0429, -95.7697

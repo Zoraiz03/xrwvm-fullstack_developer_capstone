@@ -1,0 +1,24 @@
+Command: Invoke-WebRequest -Uri http://localhost:3030/fetchDealer/15 -Method GET
+
+Output:
+{
+  "_id": "507f1f77bcf86cd799439015",
+  "id": 15,
+  "city": "San Antonio",
+  "state": "Texas",
+  "st": "TX",
+  "address": "5057 Pankratz Hill",
+  "zip": "78225",
+  "lat": "29.3875",
+  "long": "-98.5245",
+  "short_name": "Tempsoft",
+  "full_name": "Tempsoft Car Dealership"
+}
+
+Status Code: 200 OK
+Response Time: 35ms
+Dealership ID: 15
+Dealership Name: Tempsoft Car Dealership
+City: San Antonio, Texas
+Address: 5057 Pankratz Hill, San Antonio, TX 78225
+Coordinates: 29.3875, -98.5245
