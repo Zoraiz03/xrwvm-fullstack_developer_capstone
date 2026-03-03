@@ -47,7 +47,7 @@ const Dealers = () => {
   },[]);  
 
 
-let isLoggedIn = sessionStorage.getItem("username") != null ? true : false;
+let isLoggedIn = (sessionStorage.getItem("username") != null || localStorage.getItem("username") != null) ? true : false;
 return(
   <div>
       <Header/>
