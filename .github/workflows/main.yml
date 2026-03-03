@@ -44,5 +44,5 @@ jobs:
         run: npm install -g jshint
       - name: Run Linter
         run: |
-          find . -name "*.js" -not -path "*/node_modules/*" -exec jshint {} +
+          find . -name "*.js" -not -path "*/node_modules/*" -not -path "*/static/*" -not -path "*/build/*" -exec jshint --esversion=6 {} +
           echo "Linted all the javascript files successfully"
