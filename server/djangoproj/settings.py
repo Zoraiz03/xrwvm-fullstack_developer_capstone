@@ -7,8 +7,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Security
 SECRET_KEY = 'django-insecure-ccow$tz_=9%dxu4(0%^(z%nx32#s@(zt9$ih@)5l54yny)wm-0'
 DEBUG = True
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.us-south.codeengine.appdomain.cloud']
-CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000']
+ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://zuraiz18484-8000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai', 'http://127.0.0.1:8000']
 
 # Installed apps
 INSTALLED_APPS = [

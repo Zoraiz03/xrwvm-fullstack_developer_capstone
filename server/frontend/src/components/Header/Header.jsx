@@ -27,12 +27,12 @@ const Header = () => {
 let home_page_items =  <div></div>
 
 //Gets the username in the current session
-let curr_user = sessionStorage.getItem('username')
+let curr_user = sessionStorage.getItem('username') || localStorage.getItem('username')
 
 //If the user is logged in, show the username and logout option on home page
 if ( curr_user !== null &&  curr_user !== "") {
     home_page_items = <div className="input_panel">
-      <span className='username'>{sessionStorage.getItem("username")}</span>
+      <span className='username'>{curr_user}</span>
     <a className="nav_item" href="/djangoapp/logout" onClick={logout}>Logout</a>
   </div>
 }
